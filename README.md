@@ -1,58 +1,52 @@
-# 📉 ANN Classification Customer Churn Prediction
+# ANN Classification – Customer Churn Prediction
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://annclassificationcustomerchurnprediction.streamlit.app/)
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
+This project is an end-to-end **ANN-based** customer churn prediction system with an interactive web application built using Streamlit. [web:31][web:26] The model predicts whether a customer is likely to leave the service (churn) based on their profile and activity features. [web:31]
 
-A machine learning web application that predicts customer churn probability using an **Artificial Neural Network (ANN)**. Built with **TensorFlow/Keras** for the backend model and **Streamlit** for the frontend interface.
-
-🔗 **Live Demo:** [Click Here to View App](https://annclassificationcustomerchurnprediction.streamlit.app/)
+🔗 **Live App:** https://annclassificationcustomerchurnprediction.streamlit.app/  
+📂 **Tech Stack:** Python, Pandas, NumPy, Scikit-learn, TensorFlow/Keras, Streamlit [web:31][web:29]
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
-Customer churn refers to the phenomenon where customers stop doing business with a company. This project assists businesses in identifying at-risk customers by analyzing demographic and behavioral data.
+Customer churn prediction helps businesses identify customers who are likely to discontinue their services so that they can take proactive retention actions. [web:25][web:29]  
+This project implements an Artificial Neural Network (ANN) classification model to predict churn using structured customer data (e.g., credit score, geography, gender, age, balance, tenure, etc.). [web:29][web:31]
 
-The application takes user inputs (such as credit score, geography, gender, age, balance, etc.), processes the data using a pre-trained ANN model, and outputs a prediction:
-* **Exited (1):** The customer is likely to churn.
-* **Stayed (0):** The customer is likely to stay.
-
----
-
-## 🚀 Features
-
-* **Deep Learning Model:** Utilizes a multi-layer Artificial Neural Network built with TensorFlow.
-* **Data Preprocessing:** Handles One-Hot Encoding for categorical variables (Geography, Gender) and Feature Scaling for numerical data.
-* **Interactive UI:** User-friendly form inputs via Streamlit.
-* **Real-time Prediction:** Instant classification with probability scores.
+Key capabilities:
+- ANN model for binary classification (Churn vs No Churn). [web:31]
+- Preprocessing pipeline for encoding categorical variables and scaling numerical features. [web:28][web:31]
+- Streamlit web app for user-friendly, real-time predictions. [web:29][web:25]
 
 ---
 
-## 🛠️ Tech Stack
+## Dataset
 
-| Component | Tools Used |
-| :--- | :--- |
-| **Language** | Python |
-| **Deep Learning** | TensorFlow, Keras |
-| **Data Manipulation** | Pandas, NumPy |
-| **Machine Learning** | Scikit-Learn (Preprocessing, Split) |
-| **Web Framework** | Streamlit |
-| **Model Serialization** | Pickle |
+The project uses a typical bank customer churn dataset similar to `Churn_Modelling.csv`, containing the following types of features: [web:29][web:28]
+
+- CustomerID, Surname  
+- CreditScore, Age, Tenure, Balance  
+- Geography, Gender  
+- NumOfProducts, HasCrCard, IsActiveMember  
+- EstimatedSalary  
+- Target variable: **Exited** (1 = churned, 0 = not churned)
+
+You can replace this with your own churn dataset as long as you adapt the preprocessing code accordingly. [web:25]
 
 ---
 
-## 📂 Repository Structure
+## Project Structure
+
+A typical structure for this project is: [web:29][web:31]
 
 ```text
-├── .streamlit/             # Streamlit configuration
-├── model/
-│   ├── model.h5            # Saved ANN model (Keras format)
-│   ├── label_encoder_gender.pkl
-│   ├── onehot_encoder_geo.pkl
-│   └── scaler.pkl          # StandardScaler object
-├── app.py                  # Main Streamlit application
-├── prediction.py           # Prediction logic helper
-├── requirements.txt        # Project dependencies
-└── README.md               # Documentation
+ANN_Classification_Customer_Churn_Prediction/
+├─ data/
+│  └─ Churn_Modelling.csv
+├─ models/
+│  ├─ ann_model.h5
+│  ├─ scaler.pkl
+│  └─ encoder.pkl
+├─ app.py                 # Streamlit app
+├─ training_notebook.ipynb
+├─ requirements.txt
+└─ README.md
