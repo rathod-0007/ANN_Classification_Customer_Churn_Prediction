@@ -1,7 +1,7 @@
 # 📉 ANN Customer Churn Prediction
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://annclassificationcustomerchurnprediction.streamlit.app/)
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.0%2B-orange)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
